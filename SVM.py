@@ -14,7 +14,7 @@ TrueStart=time.time()
 #Load data
 start = time.time()
 print("Loading Data")
-dataset = pd.read_csv("DatsetFraud.csv") #load data
+dataset = pd.read_csv("DatsetFraud.csv") #Not included in github repository as filesize is over 100MB.
 end = -1*(start-time.time())
 print("Data loaded in " + str(end) + " seconds\n")
 
