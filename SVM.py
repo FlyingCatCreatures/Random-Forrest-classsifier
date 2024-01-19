@@ -14,7 +14,7 @@ TrueStart=time.time()
 #Load data
 start = time.time()
 print("Loading Data")
-dataset = pd.read_csv("DatsetFraud.csv") #Not included in github repository as filesize is over 100MB.
+dataset = pd.read_csv("Short.csv") #Not included in github repository as filesize is over 100MB.
 end = -1*(start-time.time())
 print("Data loaded in " + str(end) + " seconds\n")
 
@@ -31,7 +31,7 @@ data_labels = label_encoder.transform(data_labels)
 
 
 #Drop labels from input data
-data_selectedColums = dataset.drop(['isFraud'], axis=1) #Not dropping any colums, as any of them might be of use to the SVM
+data_selectedColums = dataset.drop(['isFraud', 'oldbalanceOrg', 'newbalanceOrig', 'oldbalanceDest', 'newbalanceDest' ], axis=1)
 
 #Extract features
 start = time.time()
